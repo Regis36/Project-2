@@ -26,6 +26,7 @@ function addC() {
 }
 
 //Removes a row
+//function done by Regis 
 function removeR() {
     alert("Clicked Remove Row")
 }
