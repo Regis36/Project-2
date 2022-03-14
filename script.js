@@ -1,6 +1,7 @@
 let colorSelected; 
 
 //Adds a row
+//function done by Antony 
 function addR() {
     //alert("Clicked Add Row")
     let grid = document.getElementById("grid");
@@ -19,6 +20,7 @@ function addR() {
     }
 }
 //Adds a column
+//function done by Blaise 
 function addC() {
     //alert("Clicked Add Col")
     let cols = document.getElementsByTagName("td");
