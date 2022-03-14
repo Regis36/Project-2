@@ -1,4 +1,4 @@
-let colorSelected; 
+let colorSelected;
 
 //Adds a row
 function addR() {
@@ -6,23 +6,33 @@ function addR() {
     let grid = document.getElementById("grid");
     let rows = document.getElementsByTagName("tr");
     console.log(rows.length);
-    
+
     if (rows.length === 0) {
         let row = document.createElement("tr");
         let col = document.createElement("td");
-        col.onclick = function (){
+        col.onclick = function(){
             this.style.backgroundColor = colorSelected;
         };
         row.appendChild(col);
         grid.appendChild(row);
 
     }
+    else {
+      let row = document.createElement("tr");
+      let col = document.createElement("td");
+      col.onclick = function(){
+          this.style.backgroundColor = colorSelected;
+      };
+      row.appendChild(col);
+      grid.appendChild(row);
+    }
+
 }
 //Adds a column
 function addC() {
     //alert("Clicked Add Col")
     let cols = document.getElementsByTagName("td");
-    console.log(cols.length); 
+    console.log(cols.length);
 }
 
 //Removes a row
@@ -50,4 +60,3 @@ function clearAll(){
 function fillU(){
     alert("Clicked Fill All Uncolored")
 }
-
