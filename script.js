@@ -22,7 +22,7 @@ function addR() {
         row.appendChild(col);
         grid.appendChild(row);
     } 
-   
+
 
       else {
         let row = document.createElement("tr");
@@ -74,7 +74,15 @@ function selected(){
 }
 //Function done by Blaise 
 function fill(){
-    alert("Clicked Fill All")
+    //alert("Clicked Fill All")
+    let cols = document.querySelectorAll("td");
+    let row = document.querySelectorAll("tr");
+    let grid = document.getElementById("grid");
+    let col = document.createElement("td");
+    grid.addEventListener('click', function() {
+    const color = document.querySelector('.colorSelected').value;
+    cols.forEach(col => 
+    cols.style.backgroundColor = color);
 }
 
 //Clear all colors in rows and columns (make it the default white)
