@@ -1,4 +1,4 @@
-let colorSelected; 
+let colorSelected;
 
 //Adds a row
 //function done by Antony 
@@ -10,11 +10,12 @@ function addR() {
       let row = document.createElement("tr"); //add a row to the grid 
         let col = document.createElement("td");
     console.log(rows.length);
-    
-    //if there are no rows added... 
+
     if (rows.length === 0) {
-         //add a column to the grid 
-        col.onclick = function (){
+        let row = document.createElement("tr");
+        let col = document.createElement("td");
+        col.onclick = function(){
+
             this.style.backgroundColor = colorSelected;
         };
         
@@ -27,12 +28,21 @@ function addR() {
         }
     }
 
-        
+    else {
+      let row = document.createElement("tr");
+      let col = document.createElement("td");
+      col.onclick = function(){
+          this.style.backgroundColor = colorSelected;
+      };
+      row.appendChild(col);
+      grid.appendChild(row);
+    }
 }
 //Adds a column
 //function done by Blaise 
 function addC() {
     //alert("Clicked Add Col")
+    let cols = document.getElementsByTagName("td");
 }
 
 //Removes a row
@@ -72,4 +82,3 @@ function clearAll(){
 function fillU(){
     alert("Clicked Fill All Uncolored")
 }
-
