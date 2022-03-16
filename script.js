@@ -16,19 +16,41 @@ function addR() {
         row.appendChild(col);
         grid.appendChild(row);
 
-    }
+
+  }
+      else {
+        let row = document.createElement("tr");
+        let col = document.createElement("td");
+        col.onclick = function(){
+            this.style.backgroundColor = colorSelected;
+        };
+        row.appendChild(col);
+        grid.appendChild(row);
+      }
+
 }
 //Adds a column (:
 function addC() {
     //alert("Clicked Add Col")
-    let cols = document.getElementsByTagName("td");
-    console.log(cols.length);
+    let grid = document.getElementById("grid");
+    let rows = document.getElementsByTagName("tr");
+    let cols = document.getElementsByTagName("td")
+
+    console.log("cols2", cols.length);
+
+    for (let i = 0; i < rows.length; i++) {
+      let col = document.createElement("td");
+      let row = document.createElement("tr");
+      rows [i].appendChild(col);
+    }
+
 }
 
-//Removes a row
-function removeR() {
-    alert("Clicked Remove Row")
+  //Removes a row
+  function removeR() {
+      alert("Clicked Remove Row")
 }
+
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
