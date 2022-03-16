@@ -22,28 +22,34 @@ function addR() {
         row.appendChild(col);
         grid.appendChild(row);
     } 
-    else {
-        for(let i = 0; i < grid.rows.length; i++){
-            grid.appendChild(row);
-        }
-    }
+   
 
-    else {
-      let row = document.createElement("tr");
-      let col = document.createElement("td");
-      col.onclick = function(){
-          this.style.backgroundColor = colorSelected;
-      };
-      row.appendChild(col);
-      grid.appendChild(row);
-    }
-}
-//Adds a column
-//function done by Blaise 
+      else {
+        let row = document.createElement("tr");
+        let col = document.createElement("td");
+        col.onclick = function(){
+            this.style.backgroundColor = colorSelected;
+        };
+        row.appendChild(col);
+        grid.appendChild(row);
+      }
+
+//Adds a column (:
 function addC() {
     //alert("Clicked Add Col")
-    let cols = document.getElementsByTagName("td");
+    let grid = document.getElementById("grid");
+    let rows = document.getElementsByTagName("tr");
+    let cols = document.getElementsByTagName("td")
+
+    for (let i = 0; i < rows.length; i++) {
+      let col = document.createElement("td");
+      let row = document.createElement("tr");
+      rows[i].appendChild(col);
+    }
+
 }
+
+  //Removes a row
 
 //Removes a row
 //function done by Regis 
